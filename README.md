@@ -287,7 +287,7 @@ Akun ini dibuat otomatis saat Anda menjalankan php artisan migrate:fresh \--seed
 **Dibuat oleh:** 
 - [Ahmad Ramdhani](https://github.com/Ahmadramdhnau28)
 - [Alfhad Rizqon A](https://github.com/Alfhadrizqon)
-- [Angga Permana](https://github.com/fermnafermna)
+- [Angga Permana](https://github.com/fermna)
 - [Riza Alraihany](https://github.com/RizaAlraihany)
 
 📧 Terbuka untuk kolaborasi & pengembangan fitur baru.
