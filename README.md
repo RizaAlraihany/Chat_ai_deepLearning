@@ -167,26 +167,113 @@ Akun ini dibuat otomatis saat Anda menjalankan php artisan migrate:fresh \--seed
 
 ## **📸 Preview Tampilan**
 
-| Halaman Landing                                                                                  | Halaman Chat (User) | Admin Dashboard (Persona) |
-| :----------------------------------------------------------------------------------------------- | :------------------ | :------------------------ |
-|                                                                                                  |                     |                           |
-| ![Landing Page ](asset/landingPage.png) |                     |                           |
+| Halaman Landing  |
+| :--------------- |
+| ![Landing Page](asset/landingPage.png) |  
+
+| Halaman Chat (User) | Admin Dashboard (Persona) |
+| :------------------ | :------------------------ |
+ |![Halaman Chat](asset/chat.png)|![Admin Dashboard](asset/admin.png)|
+
+ | Halaman Log-In | Halaman Register |
+| :------------------ | :------------------------ |
+ |![Halaman Chat](asset/login.png)|![Admin Dashboard](asset/register.png)|
 
 ## **🗁 Struktur Folder**
+---
 
-/  
-├── backend/ \# API Server (Laravel)  
-│ ├── app/Http/Controllers/ \# Logika API (Chat, Auth, Admin)  
-│ ├── app/Http/Middleware/ \# Security Logic  
-│ ├── app/Models/ \# Representasi Database  
-│ ├── app/Services/ \# Logika Integrasi Gemini API  
-│ ├── routes/api.php \# Endpoint API  
-│ └── database/ \# Migrations & Seeders  
-│  
-└── frontend/ \# Client (React)  
- ├── src/App.jsx \# Core UI, State, & Logic  
- ├── src/index.css \# Tailwind Directives  
- └── tailwind.config.js \# Konfigurasi Styling
+```
+ /ai-chat-project
+├── frontend/                           # React Application
+│   ├── public/
+│   │   └── vite.svg                   # App icon
+│   │
+│   ├── src/
+│   │   ├── App.jsx                    # Core UI, State, & Logic
+│   │   ├── main.jsx                   # Entry point
+│   │   ├── index.css                  # Global styles & Tailwind
+│   │   │
+│   │   └── assets/                    # Static assets
+│   │
+│   ├── .gitignore
+│   ├── package.json                   # Dependencies & scripts
+│   ├── vite.config.js                 # Vite configuration
+│   ├── tailwind.config.js             # Tailwind configuration
+│   ├── postcss.config.js              # PostCSS configuration
+│   ├── eslint.config.js               # ESLint rules
+│   └── README.md
+│
+├── backend/                            # Laravel Application
+│   ├── app/
+│   │   ├── Http/
+│   │   │   ├── Controllers/
+│   │   │   │   ├── AuthController.php        # Registration, Login, Logout
+│   │   │   │   ├── ChatController.php        # Chat & Conversations
+│   │   │   │   └── AdminController.php       # AI Settings Management
+│   │   │   │
+│   │   │   ├── Middleware/
+│   │   │   │   ├── AdminMiddleware.php       # Admin-only access
+│   │   │   │   └── VerifyCsrfToken.php       # CSRF exclusions
+│   │   │   │
+│   │   │   └── Kernel.php                    # Middleware registration
+│   │   │
+│   │   ├── Models/
+│   │   │   ├── User.php                      # User model with roles
+│   │   │   ├── Conversation.php              # Conversation model
+│   │   │   ├── Message.php                   # Message model
+│   │   │   └── AiSetting.php                 # AI configuration
+│   │   │
+│   │   └── Services/
+│   │       └── GeminiService.php             # Gemini API integration
+│   │
+│   ├── bootstrap/
+│   │   └── app.php                           # Application bootstrap
+│   │
+│   ├── config/
+│   │   ├── app.php                           # App configuration
+│   │   ├── cors.php                          # CORS settings
+│   │   ├── database.php                      # Database config
+│   │   └── sanctum.php                       # Sanctum settings
+│   │
+│   ├── database/
+│   │   ├── migrations/
+│   │   │   ├── 0001_01_01_000000_create_users_table.php
+│   │   │   ├── 0001_01_01_000001_create_cache_table.php
+│   │   │   ├── 2019_12_14_000001_create_personal_access_tokens_table.php
+│   │   │   ├── 2024_01_01_000001_create_ai_settings_table.php
+│   │   │   ├── 2024_01_02_000001_create_conversations_table.php
+│   │   │   └── 2024_01_03_000001_create_messages_table.php
+│   │   │
+│   │   └── seeders/
+│   │       └── DatabaseSeeder.php            # Default users & settings
+│   │
+│   ├── routes/
+│   │   ├── api.php                           # API routes
+│   │   ├── web.php                           # Web routes
+│   │   └── console.php                       # Console commands
+│   │
+│   ├── storage/
+│   │   ├── app/
+│   │   ├── framework/
+│   │   └── logs/                             # Application logs
+│   │
+│   ├── .env.example                          # Environment template
+│   ├── .gitignore
+│   ├── artisan                               # Laravel CLI
+│   ├── composer.json                         # PHP dependencies
+│   └── README.md
+│
+├── asset/                        # Application screenshots
+│   ├── landingPage.png
+│   ├── chat.png
+│   ├── admin.png
+│   ├── login.png
+│   └── register.png
+│
+└── README.md                           # This file
+```
+
+---
 
 ## **🧬 Rencana Pengembangan Berikutnya**
 
@@ -197,7 +284,11 @@ Akun ini dibuat otomatis saat Anda menjalankan php artisan migrate:fresh \--seed
 
 ## **👨‍💻 Pengembang**
 
-**Dibuat oleh:** [Riza Alraihany](https://github.com/RizaAlraihany)
+**Dibuat oleh:** 
+- [Ahmad Ramdhani](https://github.com/Ahmadramdhnau28)
+- [Alfhad Rizqon A](https://github.com/Alfhadrizqon)
+- [Angga Permana](https://github.com/AnggaPermana)
+- [Riza Alraihany](https://github.com/RizaAlraihany)
 
 📧 Terbuka untuk kolaborasi & pengembangan fitur baru.
 
